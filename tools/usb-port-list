@@ -1,0 +1,30 @@
+#!/bin/sh
+set -eu
+
+show_port() {
+	label="$1"
+	path="$2"
+	device="/sys/bus/usb/devices/$path"
+
+	if [ ! -d "$device" ]; then
+		printf '%-3s  %-7s  %s\n' "$label" "empty" "$path"
+		return
+	fi
+
+	speed="$(cat "$device/speed" 2>/dev/null || printf '?')"
+	case "$speed" in
+		5000) speed_text="5 Gbit/s" ;;
+		480)  speed_text="480 Mbit/s" ;;
+		12)   speed_text="12 Mbit/s" ;;
+		1.5)  speed_text="1.5 Mbit/s" ;;
+		*)    speed_text="$speed Mbit/s" ;;
+	esac
+
+	printf '%-3s  %-7s  %-11s  %s\n' "$label" "present" "$speed_text" "$path"
+}
+
+printf '%-3s  %-7s  %-11s  %s\n' PORT STATUS SPEED PATH
+show_port B1 2-1
+show_port W2 1-1.3
+show_port W3 1-1.1
+show_port W4 1-2

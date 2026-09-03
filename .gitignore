@@ -1,0 +1,35 @@
+# Images and generated boot artifacts
+*.img
+*.img.*
+*.iso
+*.dtb
+*.scr
+build/
+downloads/
+work/
+
+# Device dumps and backups must never be published
+backups/
+*.bin
+*.dump
+*.raw
+
+# Credentials and local state
+.env
+.env.*
+!.env.example
+*credential*
+*secret*
+*token*
+*.key
+*.pem
+*.p12
+*.pfx
+.ssh/
+
+# Editor and OS noise
+.*.swp
+*~
+.DS_Store
+__pycache__/
+*.pyc

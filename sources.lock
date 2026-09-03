@@ -1,0 +1,7 @@
+# Pinned public base image. Values come from the official GitHub release API.
+IMAGE_NAME=Armbian_26.08.0_amlogic_s905x3_noble_6.12.103_server_2026.08.15.img.gz
+IMAGE_DESCRIPTION='Armbian 26.08.0 Noble - S905X3 - Linux 6.12.103'
+IMAGE_SHA256=c703b8723cddaeedd4f813b07ee51e8428197ce28bed0c3b1bba6fc898d79560
+IMAGE_UNCOMPRESSED_SHA256=97776096fa40f0f38d64e5ef11fddd0f1738d3b20753a6dd6d1524f5da60c4be
+IMAGE_SIZE=1047699546
+IMAGE_URL=https://github.com/ophub/amlogic-s9xxx-armbian/releases/download/Armbian_noble_arm64_server_2026.08/Armbian_26.08.0_amlogic_s905x3_noble_6.12.103_server_2026.08.15.img.gz
