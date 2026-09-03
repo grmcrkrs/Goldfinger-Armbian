@@ -34,6 +34,5 @@ Do not delay disclosure of known limitations merely to make the checklist look
 complete. A first publication may be labeled experimental while the unchecked
 hardware coverage items in `docs/status.md` remain explicit.
 
-The current blocking item for binary-image upload is the final physical wireless
-regression with the newly pinned, redistributable Wi-Fi firmware; see
-`docs/redistribution.md`.
+The current blocking item for binary-image upload is rebuilding with the proven
+BCM4359C0 firmware and confirming one cold USB boot; see `docs/redistribution.md`.

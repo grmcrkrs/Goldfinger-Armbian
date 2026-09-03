@@ -16,7 +16,7 @@ contain different PCB, memory, Ethernet, wireless, or storage revisions.
 | CPU/thermal | Four-core load test passed without reported throttling or errors |
 | eMMC | Direct I/O and filesystem checks passed |
 | Ethernet | RTL8211F Gigabit link and traffic passed |
-| Wi-Fi | AP6398S/BCM4359 initialized; 5 GHz association and reconnect passed |
+| Wi-Fi | AP6398S/BCM4359C0 initialized; dual-band scan and 5 GHz traffic passed |
 | HDMI | Stable small-panel output; release default is forced 1280x720 at 60 Hz |
 | Bluetooth | Patched BCM4359C0 controller startup and active scan passed |
 | USB | B1 SuperSpeed and W2/W3 high-speed storage passed |
@@ -44,8 +44,15 @@ The board enablement and installation path are technically qualified as an
 experimental community release on two units. A third full eMMC installation is
 intentionally not required for this first publication.
 
-The remaining publication work is repository cleanup, license/provenance review,
-a clean-checkout documentation rehearsal, artifact upload, and upstream submission.
+The redistributable BCM4359C0 firmware was also hot-loaded from RAM on reference
+hardware. It created `wlan0`, found 12 nearby 2.4 GHz and 8 nearby 5 GHz BSS
+entries, associated at 5220 MHz with 780 Mbit/s receive/transmit link rates, and
+passed DHCP, routing, public traffic, and DNS. Bluetooth remained powered,
+discovered three devices, and logged no errors. Network identifiers were not
+captured. The final rebuilt image still requires one cold USB-boot confirmation.
+
+The remaining publication work is a final rebuild/cold-boot check, clean-checkout
+documentation rehearsal, artifact upload, and upstream submission.
 
 ## Known limitations and coverage gaps
 

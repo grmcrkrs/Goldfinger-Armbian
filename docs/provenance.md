@@ -31,18 +31,16 @@ script verifies both base and output hashes so an upstream change fails closed.
 The firmware fetcher pins and verifies:
 
 - AP6398S Wi-Fi firmware SHA-256:
-  `47112a382d4fae929a6fdbd95c9bb968392b4ce54dc682bc7b359fe5fdaf5e02`
+  `e59d485296365ca17bd7f9cfa7be390b0b58019ee9e2d59fb78445fa33d27d48`
 - AP6398S NVRAM SHA-256:
   `92d89e67df52b9ffebde9ae852bb54f3fa10d5e3f8b4b777c9ff2fc5dd5fbf29`
 - AP6398S Bluetooth HCD SHA-256:
   `afc05608aa0058cde4ddc0f51138ff1b7629997c9f53d67c4948838d783b1fa6`
 
-The Wi-Fi binary and Cypress license are fetched from reMarkable's public Cypress
-firmware mirror at commit `04f5d06feadee32da803c54e36c2b85909142867`.
-The NVRAM, byte-identical physically tested Bluetooth HCD, and Apache NOTICE are
-fetched from the Rockchip Wi-Fi/Bluetooth package at commit
-`b2af9d94739922cbafb8c92514d2fa79c1e71a59`. Both license documents are embedded
-in the image and validated by hash. See `docs/redistribution.md`.
+The BCM4359C0 Wi-Fi binary, NVRAM, byte-identical physically tested Bluetooth HCD,
+and Apache NOTICE are fetched from the Rockchip Wi-Fi/Bluetooth package at commit
+`b2af9d94739922cbafb8c92514d2fa79c1e71a59`. The NOTICE is embedded in the image
+and validated by hash. See `docs/redistribution.md`.
 
 ## Offline installer packages
 

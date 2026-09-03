@@ -27,32 +27,33 @@ The redistributable replacement image uses these pinned inputs:
 
 | Installed purpose | Source | SHA-256 |
 |---|---|---|
-| BCM4359 Wi-Fi firmware | reMarkable Cypress mirror, commit `04f5d06f` | `47112a382d4fae929a6fdbd95c9bb968392b4ce54dc682bc7b359fe5fdaf5e02` |
+| BCM4359C0 Wi-Fi firmware | Rockchip rkwifibt package, commit `b2af9d94` | `e59d485296365ca17bd7f9cfa7be390b0b58019ee9e2d59fb78445fa33d27d48` |
 | AP6398S NVRAM | Rockchip rkwifibt package, commit `b2af9d94` | `92d89e67df52b9ffebde9ae852bb54f3fa10d5e3f8b4b777c9ff2fc5dd5fbf29` |
 | BCM4359 Bluetooth HCD | Rockchip rkwifibt package, commit `b2af9d94` | `afc05608aa0058cde4ddc0f51138ff1b7629997c9f53d67c4948838d783b1fa6` |
 
-The Cypress mirror includes a source-and-binary distribution license that permits
-redistributing its object code for use with Cypress integrated circuits. That
-license is copied into the image as `LICENCE.cypress` and pinned at SHA-256
-`3a892759b73e8b459f1a750954b316118b0061fd9d1868d11fa258c104ee7e0c`.
-The selected Wi-Fi file also matches the generic ophub copy byte-for-byte.
-
-The Rockchip firmware package identifies Apache-2.0 and carries a NOTICE file.
+The Rockchip firmware package identifies Apache-2.0 and carries a NOTICE file
+covering the selected AP6398S bundle.
 That NOTICE is copied into the image as `NOTICE.rkwifibt` and pinned at SHA-256
 `38751245389e1e23f73e6f5384b5cbe7fa972cc4410c5adc9c04b082a0b9561a`.
 Its HCD is byte-for-byte identical to the Bluetooth firmware already validated on
 the two reference boxes. Its NVRAM has the same AP6398S calibration content as the
 previous test input, with normalized line endings and whitespace.
 
+The first redistributable Wi-Fi candidate was a BCM4359B1 image from a Cypress
+package. It failed on this board's BCM4359C0 module with an SDIO HT-clock timeout
+and never created `wlan0`. The selected C0 firmware identifies itself as version
+`9.87.51.11.18`. A RAM-only hardware test produced `wlan0`, found both 2.4 GHz and
+5 GHz networks, associated at 5220 MHz, negotiated 780 Mbit/s in both directions,
+and passed DHCP, public traffic, and DNS. No network names or addresses were
+recorded.
+
 The source repositories are:
 
-- <https://github.com/reMarkable/brcmfmac-firmware>
 - <https://github.com/nishantpoorswani/rkwifibt>
 
 ## Remaining publication gate
 
-License review is no longer the blocking item. Downloaded blobs still remain out
-of the source repository; the build fetches them, verifies every hash, and embeds
-their license notices. The replacement Wi-Fi binary has not yet been physically
-regression-tested on the Goldfinger board. Build the replacement image, verify it,
-then confirm both 2.4/5 GHz Wi-Fi and Bluetooth before uploading release assets.
+License review and the replacement firmware's live hardware regression are
+complete. Downloaded blobs remain out of the source repository; the build fetches
+them, verifies every hash, and embeds the package NOTICE. Rebuild the final image
+with the selected C0 firmware and confirm a cold USB boot before uploading assets.

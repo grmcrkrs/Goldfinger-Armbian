@@ -58,8 +58,9 @@ The exact test history and remaining non-blocking coverage gaps are in
 
 > **Release availability:** the audited source and documentation are public, but
 > the finished binary image is not downloadable yet. Redistributable AP6398S
-> inputs have been identified and pinned; the replacement image still needs its
-> final build and wireless regression. Do not substitute the generic ophub base
+> inputs have been identified and pinned, and the BCM4359C0 replacement passed a
+> live hardware regression; the final image still needs rebuilding and one cold
+> USB-boot check. Do not substitute the generic ophub base
 > image: it lacks the complete tested board integration and guarded installer.
 
 ## Beginner workflow
@@ -186,5 +187,5 @@ selected. The maintainer setup and supported options are in
 
 Project-authored device-tree and script changes are GPL-2.0-or-later. Armbian,
 Ubuntu, Linux, firmware, and other included components retain their own licenses.
-The AP6398S firmware sources, licenses, hashes, and remaining physical regression
+The AP6398S firmware source, license, hashes, and remaining release-image check
 gate are recorded in [docs/redistribution.md](docs/redistribution.md).
