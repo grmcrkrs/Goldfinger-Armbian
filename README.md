@@ -1,4 +1,28 @@
-# Goldfinger V14 Armbian enablement
+<p align="center">
+  <img src="assets/goldfinger-armbian-hero.webp" alt="Blue metal Goldfinger TV box connected by UART against a dark retro-space console backdrop" width="100%">
+</p>
+
+<h1 align="center">GOLDFINGER ARMBIAN</h1>
+
+<p align="center">
+  <strong>Community Linux recovery for the blue metal enclosure TV box.</strong><br>
+  <sub>A GRMCRKRS hardware-revival project.</sub>
+</p>
+
+<p align="center">
+  <img alt="PCB GOLDFINGER V14" src="https://img.shields.io/badge/PCB-GOLDFINGER__V14-22c9b7?style=for-the-badge&labelColor=072932">
+  <img alt="PCB date 2021-12-07" src="https://img.shields.io/badge/PCB_DATE-2021--12--07-ff7636?style=for-the-badge&labelColor=072932">
+  <img alt="Experimental community support" src="https://img.shields.io/badge/STATUS-EXPERIMENTAL-ffdda9?style=for-the-badge&labelColor=072932">
+</p>
+
+<p align="center">
+  <a href="#beginner-workflow">Quick start</a> ·
+  <a href="docs/hardware.md">Hardware</a> ·
+  <a href="docs/status.md">Test status</a> ·
+  <a href="#support-this-work">Support this work</a>
+</p>
+
+---
 
 Community Armbian image, board support, and installation workflow for the TV box
 whose PCB is marked:
@@ -142,6 +166,21 @@ an intermediate USB with older staging scripts.
 
 The proposed change split and generated-file policy are documented in
 [docs/upstream.md](docs/upstream.md).
+
+## Support this work
+
+This project started with discarded hardware, jumper wires, and a serial console.
+Support helps cover additional boxes, UART adapters, removable media, test
+displays, and the time required to turn one successful rescue into a careful,
+repeatable public process.
+
+**A direct donation link is being configured.** In the meantime, starring the
+repository, sharing the exact PCB/date with other owners, and contributing
+carefully redacted test results all help.
+
+GitHub can display a native **Sponsor** button once a funding destination is
+selected. The maintainer setup and supported options are in
+[docs/funding.md](docs/funding.md).
 
 ## License
 
