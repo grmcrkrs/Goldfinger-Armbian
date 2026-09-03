@@ -32,6 +32,12 @@ The release candidate has passed:
 The exact test history and remaining non-blocking coverage gaps are in
 [docs/status.md](docs/status.md).
 
+> **Release availability:** the audited source and documentation are public, but
+> the finished binary image is not downloadable yet. Publication is held pending
+> the AP6398S firmware redistribution review. Do not substitute the generic ophub
+> base image: it lacks the complete tested board integration and guarded installer.
+> The workflow below applies when the revision-tagged release assets appear.
+
 ## Beginner workflow
 
 ### 1. Prepare the USB
