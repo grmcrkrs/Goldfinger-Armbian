@@ -57,10 +57,10 @@ The exact test history and remaining non-blocking coverage gaps are in
 [docs/status.md](docs/status.md).
 
 > **Release availability:** the audited source and documentation are public, but
-> the finished binary image is not downloadable yet. Publication is held pending
-> the AP6398S firmware redistribution review. Do not substitute the generic ophub
-> base image: it lacks the complete tested board integration and guarded installer.
-> The workflow below applies when the revision-tagged release assets appear.
+> the finished binary image is not downloadable yet. Redistributable AP6398S
+> inputs have been identified and pinned; the replacement image still needs its
+> final build and wireless regression. Do not substitute the generic ophub base
+> image: it lacks the complete tested board integration and guarded installer.
 
 ## Beginner workflow
 
@@ -186,6 +186,5 @@ selected. The maintainer setup and supported options are in
 
 Project-authored device-tree and script changes are GPL-2.0-or-later. Armbian,
 Ubuntu, Linux, firmware, and other included components retain their own licenses.
-The source repository may be published now, but the binary image must remain a
-release candidate until the AP6398S firmware redistribution question recorded in
-[docs/redistribution.md](docs/redistribution.md) is resolved.
+The AP6398S firmware sources, licenses, hashes, and remaining physical regression
+gate are recorded in [docs/redistribution.md](docs/redistribution.md).

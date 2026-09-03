@@ -21,32 +21,38 @@ The build fetches those packages from Ubuntu's official arm64 archive and
 verifies the pinned hashes. Their package copyright files and source licenses
 must remain in the installed system.
 
-## Binary-image publication hold
+## AP6398S firmware resolution
 
-The tested image adds these AP6398S firmware inputs:
+The redistributable replacement image uses these pinned inputs:
 
 | Installed purpose | Source | SHA-256 |
 |---|---|---|
-| BCM4359 Wi-Fi firmware | AOSP Amlogic Yukawa, pinned commit | `3523a4507e2da4d956eeccab58692f209feb1cbfede07c2b5157e3812d3f10f2` |
-| AP6359/AP6398S NVRAM | AOSP Amlogic Yukawa, pinned commit | `280d4ed2cd8775560805349d3f6c177b18ff27a8ee423b80c4115a400124d902` |
-| BCM4359 Bluetooth HCD | Khadas Fenix | `afc05608aa0058cde4ddc0f51138ff1b7629997c9f53d67c4948838d783b1fa6` |
+| BCM4359 Wi-Fi firmware | reMarkable Cypress mirror, commit `04f5d06f` | `47112a382d4fae929a6fdbd95c9bb968392b4ce54dc682bc7b359fe5fdaf5e02` |
+| AP6398S NVRAM | Rockchip rkwifibt package, commit `b2af9d94` | `92d89e67df52b9ffebde9ae852bb54f3fa10d5e3f8b4b777c9ff2fc5dd5fbf29` |
+| BCM4359 Bluetooth HCD | Rockchip rkwifibt package, commit `b2af9d94` | `afc05608aa0058cde4ddc0f51138ff1b7629997c9f53d67c4948838d783b1fa6` |
 
-The AOSP tree marks the package as having proprietary material and does not
-provide a clear redistribution grant for these exact blobs. The Khadas Fenix
-repository's project license does not, by itself, prove that its third-party
-firmware blob is covered by that license. The exact files were not found in the
-official linux-firmware tree, whose inclusion policy requires an explicit
-redistribution basis.
+The Cypress mirror includes a source-and-binary distribution license that permits
+redistributing its object code for use with Cypress integrated circuits. That
+license is copied into the image as `LICENCE.cypress` and pinned at SHA-256
+`3a892759b73e8b459f1a750954b316118b0061fd9d1868d11fa258c104ee7e0c`.
+The selected Wi-Fi file also matches the generic ophub copy byte-for-byte.
 
-Therefore:
+The Rockchip firmware package identifies Apache-2.0 and carries a NOTICE file.
+That NOTICE is copied into the image as `NOTICE.rkwifibt` and pinned at SHA-256
+`38751245389e1e23f73e6f5384b5cbe7fa972cc4410c5adc9c04b082a0b9561a`.
+Its HCD is byte-for-byte identical to the Bluetooth firmware already validated on
+the two reference boxes. Its NVRAM has the same AP6398S calibration content as the
+previous test input, with normalized line endings and whitespace.
 
-- the source repository may contain checksums and download/build instructions;
-- it must not commit the downloaded firmware blobs;
-- the tested binary image must not be uploaded publicly yet; and
-- publication can proceed after an authoritative license or permission covering
-  redistribution of these exact files is identified.
+The source repositories are:
 
-If that permission cannot be established, the safe fallback is a public image
-without these three additions plus a clearly separate, user-run firmware fetch
-step. Ethernet and the UART boot path do not depend on those additions, but
-Wi-Fi and Bluetooth would not be advertised as working out of the box.
+- <https://github.com/reMarkable/brcmfmac-firmware>
+- <https://github.com/nishantpoorswani/rkwifibt>
+
+## Remaining publication gate
+
+License review is no longer the blocking item. Downloaded blobs still remain out
+of the source repository; the build fetches them, verifies every hash, and embeds
+their license notices. The replacement Wi-Fi binary has not yet been physically
+regression-tested on the Goldfinger board. Build the replacement image, verify it,
+then confirm both 2.4/5 GHz Wi-Fi and Bluetooth before uploading release assets.

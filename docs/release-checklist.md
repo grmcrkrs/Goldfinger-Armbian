@@ -16,8 +16,8 @@
 
 - [ ] Beginner instructions pass from a fresh repository checkout.
 - [x] Public audit passes on the current source tree.
-- [ ] Firmware and image redistribution terms are documented.
-- [ ] Repository contains no images, firmware blobs, backups, credentials, private
+- [x] Firmware and image redistribution terms are documented.
+- [ ] Repository contains no disk images, firmware blobs, backups, credentials, private
   paths, raw logs, serial numbers, or network identifiers.
 - [ ] Release image and matching checksum are uploaded as immutable assets.
 - [ ] The release notes identify known limitations and the exact PCB date.
@@ -34,6 +34,6 @@ Do not delay disclosure of known limitations merely to make the checklist look
 complete. A first publication may be labeled experimental while the unchecked
 hardware coverage items in `docs/status.md` remain explicit.
 
-The current blocking item for binary-image upload is the exact AP6398S firmware
-redistribution grant; see `docs/redistribution.md`. This does not block publishing
-the source repository or beginning upstream review.
+The current blocking item for binary-image upload is the final physical wireless
+regression with the newly pinned, redistributable Wi-Fi firmware; see
+`docs/redistribution.md`.

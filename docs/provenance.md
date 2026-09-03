@@ -31,21 +31,22 @@ script verifies both base and output hashes so an upstream change fails closed.
 The firmware fetcher pins and verifies:
 
 - AP6398S Wi-Fi firmware SHA-256:
-  `3523a4507e2da4d956eeccab58692f209feb1cbfede07c2b5157e3812d3f10f2`
+  `47112a382d4fae929a6fdbd95c9bb968392b4ce54dc682bc7b359fe5fdaf5e02`
 - AP6398S NVRAM SHA-256:
-  `280d4ed2cd8775560805349d3f6c177b18ff27a8ee423b80c4115a400124d902`
-- Khadas AP6398S Bluetooth HCD SHA-256:
+  `92d89e67df52b9ffebde9ae852bb54f3fa10d5e3f8b4b777c9ff2fc5dd5fbf29`
+- AP6398S Bluetooth HCD SHA-256:
   `afc05608aa0058cde4ddc0f51138ff1b7629997c9f53d67c4948838d783b1fa6`
 
-Wi-Fi inputs are fetched from the Android Open Source Project's Amlogic Yukawa
-repository at commit `e52e15bbdef1d94ea819a43e83ef7c25b0de2449`. Bluetooth
-firmware is fetched from the Khadas Fenix repository. Redistribution terms must be
-reviewed before publishing any binary image; this source repository downloads rather
-than republishes those blobs. See `docs/redistribution.md` for the release gate.
+The Wi-Fi binary and Cypress license are fetched from reMarkable's public Cypress
+firmware mirror at commit `04f5d06feadee32da803c54e36c2b85909142867`.
+The NVRAM, byte-identical physically tested Bluetooth HCD, and Apache NOTICE are
+fetched from the Rockchip Wi-Fi/Bluetooth package at commit
+`b2af9d94739922cbafb8c92514d2fa79c1e71a59`. Both license documents are embedded
+in the image and validated by hash. See `docs/redistribution.md`.
 
 ## Offline installer packages
 
 The final image also embeds checksum-pinned Ubuntu Noble arm64 packages needed for
 the guarded U-Boot environment access and offline Bluetooth setup. Their exact
-versions, repository origin, hashes, and redistribution terms must be included in
-the release bill of materials before artifact publication.
+versions, repository origin, and hashes are recorded in `docs/redistribution.md`;
+their packaged copyright files remain installed.
