@@ -28,8 +28,8 @@
 
 - [x] Goldfinger-only board files are identified separately from generic changes.
 - [x] Generic installer-hook changes and the proposed split are documented.
-- [ ] Hardware evidence and UART logs are redacted.
-- [ ] The ophub patch/PR links back to the standalone tested release.
+- [x] Hardware evidence and UART logs are redacted.
+- [x] The ophub patch/PR links back to the standalone tested release.
 
 Do not delay disclosure of known limitations merely to make the checklist look
 complete. A first publication may be labeled experimental while the unchecked

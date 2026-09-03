@@ -59,8 +59,9 @@ discovered a device. Ethernet traffic and DNS, 720p HDMI detection, audio-device
 enumeration, automatic ROOTFS expansion to the full USB, and time synchronization
 passed; systemd reported zero failed units.
 
-The remaining publication work is artifact upload, source tagging, and upstream
-submission.
+The experimental image, checksum, source tag, release notes, and audited source
+are published. The board-support branch was rebased onto current ophub `main` and
+submitted upstream as pull request 3655; maintainer review is pending.
 
 ## Known limitations and coverage gaps
 
