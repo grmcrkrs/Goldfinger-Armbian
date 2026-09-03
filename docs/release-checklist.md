@@ -15,10 +15,10 @@
 
 ## Publication gates
 
-- [ ] Beginner instructions pass from a fresh repository checkout.
+- [x] Beginner instructions pass from a fresh repository checkout.
 - [x] Public audit passes on the current source tree.
 - [x] Firmware and image redistribution terms are documented.
-- [ ] Repository contains no disk images, firmware blobs, backups, credentials, private
+- [x] Repository contains no disk images, firmware blobs, backups, credentials, private
   paths, raw logs, serial numbers, or network identifiers.
 - [ ] Release image and matching checksum are uploaded as immutable assets.
 - [ ] The release notes identify known limitations and the exact PCB date.
