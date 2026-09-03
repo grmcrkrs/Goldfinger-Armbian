@@ -51,9 +51,11 @@ The source repositories are:
 
 - <https://github.com/nishantpoorswani/rkwifibt>
 
-## Remaining publication gate
+## Final image validation
 
 License review and the replacement firmware's live hardware regression are
 complete. Downloaded blobs remain out of the source repository; the build fetches
-them, verifies every hash, and embeds the package NOTICE. Rebuild the final image
-with the selected C0 firmware and confirm a cold USB boot before uploading assets.
+them, verifies every hash, and embeds the package NOTICE. The final image was
+rebuilt with the selected C0 firmware and passed a cold USB boot on 2026-09-03.
+The cold-loaded firmware matched the pinned hashes, created `wlan0`, scanned both
+wireless bands without an HT-clock failure, and initialized Bluetooth successfully.

@@ -44,15 +44,23 @@ The board enablement and installation path are technically qualified as an
 experimental community release on two units. A third full eMMC installation is
 intentionally not required for this first publication.
 
-The redistributable BCM4359C0 firmware was also hot-loaded from RAM on reference
+The redistributable BCM4359C0 firmware was first hot-loaded from RAM on reference
 hardware. It created `wlan0`, found 12 nearby 2.4 GHz and 8 nearby 5 GHz BSS
 entries, associated at 5220 MHz with 780 Mbit/s receive/transmit link rates, and
 passed DHCP, routing, public traffic, and DNS. Bluetooth remained powered,
 discovered three devices, and logged no errors. Network identifiers were not
-captured. The final rebuilt image still requires one cold USB-boot confirmation.
+captured.
 
-The remaining publication work is a final rebuild/cold-boot check, clean-checkout
-documentation rehearsal, artifact upload, and upstream submission.
+The final rebuilt image then passed a cold USB boot from factory U-Boot on
+2026-09-03. The board-specific Wi-Fi, NVRAM, Bluetooth, and NOTICE files matched
+their pinned hashes. Wi-Fi initialized with firmware `9.87.51.11.18`, scanned both
+2.4 GHz and 5 GHz, and logged zero HT-clock failures. Bluetooth powered on and
+discovered a device. Ethernet traffic and DNS, 720p HDMI detection, audio-device
+enumeration, automatic ROOTFS expansion to the full USB, and time synchronization
+passed; systemd reported zero failed units.
+
+The remaining publication work is artifact upload, source tagging, and upstream
+submission.
 
 ## Known limitations and coverage gaps
 

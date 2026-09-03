@@ -52,6 +52,7 @@ account names, passwords, or other unique identifiers.
 - [x] USB-free eMMC cold boot completed on the second unit.
 - [x] Automatic USB recovery precedence completed on the installed second unit.
 - [x] Image checksum, gzip, FAT, ext4, and embedded-content audits passed.
+- [x] Final redistributable-firmware image passed cold USB boot and hardware checks.
 - [ ] Full 2.4 GHz Wi-Fi association test.
 - [ ] W4 high-speed storage retest with another device.
 - [ ] Suspend/resume and extended thermal/network/storage soak.

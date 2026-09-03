@@ -9,6 +9,7 @@
 - [x] Guarded eMMC installation and activation passed on the second unit.
 - [x] USB-free eMMC cold boot passed.
 - [x] Automatic USB recovery precedence passed without UART input.
+- [x] Final BCM4359C0 image cold-booted and passed the hardware regression.
 - [x] Recovery-media overwrite guard passed a synthetic filesystem test.
 - [x] Public image contains no owner branding or configured account/network state.
 
@@ -34,5 +35,5 @@ Do not delay disclosure of known limitations merely to make the checklist look
 complete. A first publication may be labeled experimental while the unchecked
 hardware coverage items in `docs/status.md` remain explicit.
 
-The current blocking item for binary-image upload is rebuilding with the proven
-BCM4359C0 firmware and confirming one cold USB boot; see `docs/redistribution.md`.
+The final BCM4359C0 rebuild and cold USB-boot gate passed on 2026-09-03; see
+`docs/redistribution.md`.

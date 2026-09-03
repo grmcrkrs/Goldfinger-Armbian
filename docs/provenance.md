@@ -5,9 +5,10 @@
 - Release candidate:
   `Armbian_26.08.0_amlogic_goldfinger-v14-2021-12-07_noble_6.12.103_server_2026.09.03.img.gz`
 - Release candidate SHA-256:
-  `fb034022b05a3416fbd20155d75ce92427630cb0c79f9701ebf896c6df4bff4f`
+  `a7f1a96dc9e35eae83e5cc9013e7b0b81458e7a0bcefc3c27e0dca4fc1acdacf`
 - Release candidate uncompressed SHA-256:
-  `1271c1f54a4d33a972e9e2d5fac7781280fd7d90d4ad7fe6df2ee65cb015d640`
+  `964ea5f6a6f6e44e582f6ab1e613fc4e61482de1b9ffb4d8ba458e4caa610af2`
+- Release candidate compressed size: `1047983565` bytes
 - Goldfinger compatibility ID: `goldfinger-v14-2021-12-07`
 - Pinned ophub source revision: `26ce84cdd716b307517e794880666ebb3ca19944`
 

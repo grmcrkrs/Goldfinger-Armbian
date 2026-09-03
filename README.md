@@ -56,12 +56,11 @@ The release candidate has passed:
 The exact test history and remaining non-blocking coverage gaps are in
 [docs/status.md](docs/status.md).
 
-> **Release availability:** the audited source and documentation are public, but
-> the finished binary image is not downloadable yet. Redistributable AP6398S
-> inputs have been identified and pinned, and the BCM4359C0 replacement passed a
-> live hardware regression; the final image still needs rebuilding and one cold
-> USB-boot check. Do not substitute the generic ophub base
-> image: it lacks the complete tested board integration and guarded installer.
+> **Release availability:** the final image has been rebuilt from pinned,
+> redistributable inputs and passed a cold USB-boot hardware regression. Release
+> assets are published on the GitHub Releases page. Do not substitute the generic
+> ophub base image: it lacks the complete tested board integration and guarded
+> installer.
 
 ## Beginner workflow
 
