@@ -20,9 +20,9 @@
 - [x] Firmware and image redistribution terms are documented.
 - [x] Repository contains no disk images, firmware blobs, backups, credentials, private
   paths, raw logs, serial numbers, or network identifiers.
-- [ ] Release image and matching checksum are uploaded as immutable assets.
-- [ ] The release notes identify known limitations and the exact PCB date.
-- [ ] A source tag records the commit used for the release.
+- [x] Release image and matching checksum are uploaded as immutable assets.
+- [x] The release notes identify known limitations and the exact PCB date.
+- [x] A source tag records the commit used for the release.
 
 ## Upstream handoff
 
