@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/goldfinger-armbian-hero.webp" alt="Blue metal Goldfinger TV box connected by UART against a dark retro-space console backdrop" width="100%">
+  <img src="assets/goldfinger-v14-armbian-hero.png" alt="Blue metal Goldfinger V14 TV box with UART leads against a dark circuit-board space backdrop" width="100%">
 </p>
 
 <h1 align="center">GOLDFINGER ARMBIAN</h1>
